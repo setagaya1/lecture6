@@ -21,8 +21,9 @@ public class HelloWorldController {
         model.addAttribute( "datetime", fdate1);
 
         //メッセージの場合分けに使用する時刻の取得
-        LocalTime localTimeNow =  LocalTime.now();
+        LocalTime localTimeNow =  date1.toLocalTime();
         LocalTime branchTime = LocalTime.of(17,00,00);
+
 
         //メッセージの分岐
         if(localTimeNow.isAfter(branchTime)) {
